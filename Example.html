@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FileExample</title>
+</head>
+<body style="background-color:rgb(129, 188, 211);text-align:center;">
+    <h1>My Cat</h1>
+    <img class="Cat" src="images/CAT.jpg" alt="เเมว" onclick="CAT()">
+    <h2 style="color:rebeccapurple" id="MyText">My</h2>
+  <b>Enter</b>  
+   <input type="text" id="Input">
+   <button onclick="OK('Text:')">OK</button>
+   <button onclick="Change()">Change Text</button>
+</body>
+<script>
+    function CAT(){
+    alert("CAT")
+    }
+    function OK(text){
+        var mergeText = text + document.getElementById("Input").value;
+        alert(mergeText);
+    }
+    function Change(){
+     document.getElementById("MyText").innerHTML = 'My' + document.getElementById('Input').value;
+    }
+</script>
+<style>
+ button{
+     background-color: seagreen;
+ }
+ button:active{
+     background-color: red;
+ }
+ .Cat{
+ width: 500px; 
+ }
+ .Cat:target{
+     width: 650px;
+ }
+ .Cat:hover{
+     width: 600px   ;
+ }
+</style>
+</html>
